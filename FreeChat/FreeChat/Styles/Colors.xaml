@@ -6,7 +6,8 @@
                     mc:Ignorable="d"
                     x:Class="FreeChat.Styles.Colors">
 
-    <Color x:Key="AccentColor">#5A89FF</Color>
+    <Color x:Key="AccentColor">#848484</Color>
+    <Color x:Key="CorbuttonConversation">#343a40</Color>
     <Color x:Key="SecondaryAccentColor">#BFD0FB</Color>
     <!--<Color x:Key="PrimaryColor">White</Color>-->
     <OnPlatform x:TypeArguments="Color" x:Key="PrimaryColor">

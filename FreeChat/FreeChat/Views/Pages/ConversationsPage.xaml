@@ -9,10 +9,10 @@
             xmlns:root="clr-namespace:FreeChat"
             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
             BindingContext="{x:Static root:AppLocator.ConversationsViewModel}"
-            Title="{x:Static textRes:TextResources.Messages}"
+            Title=""
             x:Name="conversationsPage"
             xmlns:effects="clr-namespace:FreeChat.Views.Effects"
-            BackgroundColor="{StaticResource PrimaryColor}"
+            BackgroundColor="#f5f7fa"
             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
             xmlns:customControls="clr-namespace:FreeChat.Views.CustomControls"
                 xmlns:dataTemplates="clr-namespace:FreeChat.Views.DataTemplates"
@@ -21,7 +21,10 @@
     <!--BackgroundColor="{StaticResource PrimaryColor}"-->
     <Shell.TitleView>
         <Grid>
+            <Image Source="logocosmos.png"></Image>
             <Label Text="{Binding Title, Source={x:Reference conversationsPage}}"
+                FontSize="15"
+                TextColor="#414141"
                 Style="{StaticResource PageTitleLabel}">
             </Label>
         </Grid>
@@ -60,18 +63,19 @@
 
                 <pancakeView:PancakeView CornerRadius="20"
                                          HasShadow="{OnPlatform Android=False, iOS=True}"
-                                         Margin="15,10,15,10"
+                                         Margin="10,10,10,10"
                                          HeightRequest="60"
                                          Style="{StaticResource LightShadowPancakeViewStyle}"
                                          BackgroundColor="White">
 
-                    <Grid Margin="20,10">
+                    <Grid Margin="20,10" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Entry Placeholder="Search"
+                        <Entry Placeholder="Pesquisar..."
+                            FontSize="15"
                             Text="{Binding SearchText}"
                             VerticalOptions="Center"
                             FontFamily="{StaticResource QuickSandBold}"
@@ -91,13 +95,12 @@
                     </Grid>
                 </pancakeView:PancakeView>
 
-                <customControls:ToggleButton HorizontalOptions="Start"
+              <customControls:ToggleButton HorizontalOptions="Start"
                                             Margin="15,10,15,10"
                                             VerticalOptions="Center"
-                                            ToggleOptionTitle="All"
-                                            Grid.Row="1"
-                                            ToggleCommand="{Binding FilterOptionChangedCommand}"
-                                            NotToggledOptionTitle="Online (1)" />
+                                            ToggleOptionTitle="Conversas"
+                                            Grid.Row="1"                                           
+                                            ToggleCommand="{Binding FilterOptionChangedCommand}"/> 
 
 
                 <CollectionView ItemsSource="{Binding Conversations}"
@@ -114,7 +117,7 @@
                                     <RowDefinition />
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-                                <dataTemplates:SimpleUserProfileTemplate HeightRequest="{OnPlatform Android=100, iOS=80}"/>
+                                <dataTemplates:SimpleUserProfileTemplate HeightRequest="{OnPlatform Android=80, iOS=80}"/>
                                 <pancakeView:PancakeView BackgroundGradientStartColor="#D8D8D8"
                                                         BackgroundGradientEndColor="Transparent"
                                                         HeightRequest="1"
@@ -131,7 +134,7 @@
             <ActivityIndicator IsRunning="{Binding IsBusy}"
                             IsVisible="{Binding IsBusy}"
                             Grid.RowSpan="2"
-                            Color="{StaticResource AccentColor}"
+                            Color="{StaticResource CorbuttonConversation}"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             HeightRequest="50"
@@ -143,7 +146,6 @@
                                     IsVisible="False"
                                     CornerRadius="50"
                                     BackgroundColor="White" >
-
                 <pancakeView:PancakeView.Margin>
 
                     <OnPlatform x:TypeArguments="Thickness">

@@ -6,22 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Images\alfredo.jpg" />
-    <None Remove="Resources\Images\carelle.jpg" />
-    <None Remove="Resources\Images\john.jpg" />
-    <None Remove="Resources\Images\rea.jpg" />
-    <None Remove="Resources\Images\rebeca.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Images\alfredo.jpg" />
-    <EmbeddedResource Include="Resources\Images\carelle.jpg" />
-    <EmbeddedResource Include="Resources\Images\john.jpg" />
-    <EmbeddedResource Include="Resources\Images\rea.jpg" />
-    <EmbeddedResource Include="Resources\Images\rebeca.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.1.0" />
     <PackageReference Include="Humanizer.Core" Version="2.7.9" />
     <PackageReference Include="ReactiveUI.Fody" Version="11.2.1" />

@@ -43,8 +43,8 @@
                                            Grid.RowSpan="2"
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center"
-                                           HeightRequest="{OnPlatform Android=60, iOS=50}"
-                                           WidthRequest="{OnPlatform Android=60, iOS=50}"
+                                           HeightRequest="{OnPlatform Android=50, iOS=50}"
+                                           WidthRequest="{OnPlatform Android=50, iOS=50}"
                                            Source="{Binding Peer.ProfilePic, Converter={StaticResource ImageResourceConverter}}">
 
                     <!--
@@ -55,8 +55,8 @@
                         <DataTrigger TargetType="ffimageLoader:CachedImage"
                                      Binding="{Binding IsInTitle, Source={x:Reference simpleUserProfileTemplate_srew}}"
                                      Value="True">
-                            <Setter Property="HeightRequest" Value="45"/>
-                            <Setter Property="WidthRequest" Value="45"/>
+                            <Setter Property="HeightRequest" Value="15"/>
+                            <Setter Property="WidthRequest" Value="15"/>
                         </DataTrigger>
                     </ffimageLoader:CachedImage.Triggers>
                     
@@ -65,11 +65,11 @@
                     </ffimageLoader:CachedImage.Transformations>
                 </ffimageLoader:CachedImage>
 
-                <Label Text="{StaticResource FontAwesomeCircle}"
+               <!-- <Label Text="{StaticResource FontAwesomeCircle}"
                        FontFamily="{StaticResource FontAwesome}"
                        Grid.Column="1" Grid.Row="1"
                        IsVisible="{Binding Peer.IsOnline}"
-                       FontSize="Caption"
+                       FontSize="15"
                        TextColor="{StaticResource ConnectedColor}">
 
                     <Label.Triggers>
@@ -98,7 +98,7 @@
                             </Setter>
                         </DataTrigger>
                     </Label.Triggers>
-                </Label>
+                </Label> -->
 
   <!-- <pancakeView:PancakeView CornerRadius="90"
                                 BackgroundColor="{StaticResource ConnectedColor}"

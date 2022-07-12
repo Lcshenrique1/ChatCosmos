@@ -55,7 +55,7 @@
                                                VerticalOptions="Center" 
                                                CornerRadius="90"
                                                HeightRequest="40" WidthRequest="40"
-                                               IconSize="25"
+                                               IconSize="15"
                                                PressedCommand="{Binding Source={x:Reference MessagePagecmdeio}, Path=BackCommand}"
                                                Icon="{StaticResource FontAwesomeChevronLeft}"
                                                BackgroundColor="{StaticResource PrimaryColor}" 
@@ -90,25 +90,6 @@
                             <On Platform="Android" Value="0,0,0,0"/>
                         </OnPlatform>
                     </StackLayout.Margin>
-
-                    <customControls:FloatingButton Icon="{StaticResource FontAwesomePhone}"
-                                                   IconColor="{StaticResource AccentColor}"
-                                                   HasShadow="False"
-                                                   BackgroundColor="{StaticResource PrimaryColor}"
-                                                   IconSize="25" 
-                                                   CornerRadius="90"
-                                                   WidthRequest="40"
-                                                   HeightRequest="40"/>
-
-                    <customControls:FloatingButton Icon="{StaticResource FontAwesomeVideo}"
-                                                   IconColor="{StaticResource AccentColor}"
-                                                   HasShadow="False" 
-                                                   CornerRadius="90"
-                                                   BackgroundColor="{StaticResource PrimaryColor}"
-                                                   IconSize="25"
-                                                   WidthRequest="40"
-                                                   HeightRequest="40"
-                                                   Margin="0,0,10,0"/>
                 </StackLayout>
 
             </Grid>
@@ -208,9 +189,9 @@
                                 </StackLayout>
 
                                 <customControls:FloatingButton Grid.Column="2"
-                                                               IconSize="15"
-                                                               HeightRequest="30"
-                                                               WidthRequest="30"
+                                                               IconSize="5"
+                                                               HeightRequest="10"
+                                                               WidthRequest="10"
                                                                HorizontalOptions="End"
                                                                VerticalOptions="Start"
                                                                HasShadow="False"
@@ -227,7 +208,7 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
-                                <Editor Placeholder="Message"
+                                <Editor Placeholder="Mensagem..."
                                         Margin="10,5,5,10"
                                         AutoSize="TextChanges"
                                         Text="{Binding CurrentMessage}"
@@ -284,10 +265,10 @@
 
                                 </Editor>
 
-                                <customControls:FloatingButton CornerRadius="90"
+                                <customControls:FloatingButton CornerRadius="20"
                                                                Grid.Column="1"
-                                                               HeightRequest="50"
-                                                               WidthRequest="50"
+                                                               HeightRequest="20"
+                                                               WidthRequest="20"
                                                                Margin="5"
                                                                Icon="{StaticResource FontAwesomePaperClip}"
                                                                IconColor="{StaticResource PrimaryTextColor}"
@@ -298,14 +279,14 @@
                         </Grid>
                     </pancakeView:PancakeView>
 
-                    <customControls:FloatingButton Grid.Column="1" WidthRequest="60" HeightRequest="60"
+                    <customControls:FloatingButton Grid.Column="1" WidthRequest="30" HeightRequest="30"
                                                    HorizontalOptions="Center" VerticalOptions="Center"
                                                    BackgroundColor="{StaticResource AccentColor}"
                                                    PressedCommand="{Binding SendMessageCommand}"
                                                    Icon="{StaticResource FontAwesomePaperPlane}"
                                                    IconColor="{StaticResource PrimaryColor}"
                                          Style="{StaticResource LightShadowPancakeViewStyle}"
-                                                   Margin="5,0,10,0">
+                                                   Margin="5,0,5,0">
                         <customControls:FloatingButton.Margin>
                             <OnPlatform x:TypeArguments="Thickness">
                                 <On Platform="iOS" Value="5,0,10,0"/>
